@@ -12,19 +12,30 @@ import ThemeToggle from "./ThemeToggle.astro"
       class="flex items-center mt-2 pb-2 text-2xl title cursor-pointer"
       onclick="scrollToTop()"
     >
-     <span class="text-gray-300 mr-1 blinking" style="color: #e2e8f0;background-color: #d6d6d6;padding: 0.2em 0.4em;border-radius: 0.25em;text-shadow: 1px 1px 0px rgba(0,0,0,0.2);">
+     <link href="https://fonts.googleapis.com/css?family=Wen+Yue+Gu+Dian+Ming+Kai" rel="stylesheet">
+
+<span class="text-gray-300 mr-1 blinking" style="font-family: 'Wen Yue Gu Dian Ming Kai', serif;color: #e2e8f0;background-color: #d6d6d6;padding: 0.2em 0.4em;border-radius: 0.25em;text-shadow: 1px 1px 0px rgba(0,0,0,0.2);">
   艾兔思Aitools
 </span>
 
 <style>
-  @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
+  .text-gray-300 {
+    font-family: 'Wen Yue Gu Dian Ming Kai', serif;
+    color: #e2e8f0;
+    background-color: #d6d6d6;
+    padding: 0.2em 0.4em;
+    border-radius: 0.25em;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
   }
 
   .blinking {
     animation: blink 2s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
   }
 </style>
 

@@ -1,5 +1,5 @@
 {
-  "name": "vercel-chatgpt",
+  "name": "aitools-chatgpt",
   "version": "0.1.0",
   "description": "Powered by OpenAI Chatgpt API and Vercel",
   "type": "module",

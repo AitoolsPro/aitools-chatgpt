@@ -63,7 +63,7 @@ export const post: APIRoute = async context => {
     }
 
     if (pwd && pwd !== password) {
-      throw new Error("密码错误，请先在左下设置中，填写密码：aitools ，如自有API KEY ,请填写自己的使用更加稳定，目前由本人提供APIKEY ，给大家试用，滥用删ID，如有使用问题添加微信：4607868，进Ai交流群。")
+      throw new Error("密码错误，请先在左下设置中，填写密码：aitools ，如自有API KEY ,填写自己的使用更加稳定，目前由本人提供APIKEY ，给大家试用，偶尔用完会失效，需要更新，滥用聊天删ID，如有使用问题添加微信：4607868，进Ai交流群。")
     }
 
     if (!messages?.length) {

@@ -69,5 +69,7 @@
   background-size: cover;
 }
 
-
+html.dark .bg-openai {
+  background-color: #fff !important;
+}
 

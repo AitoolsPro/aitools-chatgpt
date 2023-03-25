@@ -28,7 +28,7 @@ export default (props: Props) => {
     error: "bg-gradient-to-r from-red-400 to-red-700",
     system: "bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300",
     user: "bg-gradient-to-r from-red-300 to-blue-700 ",
-    assistant: "bg-gradient-to-r from-yellow-300 to-red-700 "
+    assistant: "bg-gradient-to-r bg-assistant"
   }
 
   const md = MarkdownIt({

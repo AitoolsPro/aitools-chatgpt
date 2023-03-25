@@ -25,10 +25,10 @@ interface Props {
 export default (props: Props) => {
   useCopyCode()
   const roleClass = {
-    error: "bg-gradient-to-r from-red-400 to-red-700",
-    system: "bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300",
-    user: "bg-gradient-to-r from-red-300 to-blue-700 ",
-    assistant: "bg-gradient-to-r bg-assistant"
+    error: "bg-gradient-to-r bg-openai",
+    system: "bg-gradient-to-r bg-openai",
+    user: "bg-gradient-to-r bg-user",
+    assistant: "bg-gradient-to-r bg-openai"
   }
 
   const md = MarkdownIt({

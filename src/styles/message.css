@@ -70,6 +70,6 @@
 }
 
 
-html[class="dark"] .bg-openai {
+html.dark .bg-openai {
   background-color: #fff;
 }

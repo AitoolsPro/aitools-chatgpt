@@ -59,7 +59,11 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-.bg-assistant {
+.bg-openai {
+  background-image: url(/assets/openai.svg) !important;
+  background-size: cover;
+}
+.bg-user {
   background-image: url(https://www.aitools.chat/wp-content/themes/onenav/images/favicon.png) !important;
   background-size: cover;
 }

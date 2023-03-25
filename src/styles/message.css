@@ -33,9 +33,7 @@
 .message table td {
   padding: 0.6rem 1rem;
 }
-html[class="dark"] .bg-openai {
-  background-color: #fff;
-}
+
 
 .message table tbody tr:last-of-type {
   border-bottom: 2px solid #64748b40;
@@ -69,4 +67,9 @@ html[class="dark"] .bg-openai {
 .bg-user {
   background-image: url(https://www.aitools.chat/wp-content/themes/onenav/images/favicon.png) !important;
   background-size: cover;
+}
+
+
+html[class="dark"] .bg-openai {
+  background-color: #fff;
 }

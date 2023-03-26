@@ -1,9 +1,10 @@
 import type { APIRoute } from "astro"
 import type { ParsedEvent, ReconnectInterval } from "eventsource-parser"
 import { createParser } from "eventsource-parser"
-import type { ChatMessage } from "~/types"
+import type { ChatMessage, Model } from "~/types"
 import { countTokens } from "~/utils/tokens"
 import { splitKeys, randomKey, fetchWithTimeout } from "~/utils"
+import { defaultMaxInputTokens, defaultModel } from "~/system"
 
 export const config = {
   runtime: "edge",
@@ -43,7 +44,25 @@ export const baseURL = import.meta.env.NOGFW
       ""
     )
 
-const maxTokens = Number(import.meta.env.MAX_INPUT_TOKENS)
+let maxInputTokens = defaultMaxInputTokens
+if (import.meta.env.MAX_INPUT_TOKENS) {
+  try {
+    const _ = import.meta.env.MAX_INPUT_TOKENS
+    if (_ && Number.isInteger(Number(_))) {
+      maxInputTokens = Object.entries(maxInputTokens).reduce((acc, [k]) => {
+        acc[k as Model] = Number(_)
+        return acc
+      }, {} as typeof maxInputTokens)
+    } else {
+      maxInputTokens = {
+        ...maxInputTokens,
+        ...JSON.parse(_)
+      }
+    }
+  } catch (e) {
+    console.error("Error parsing MAX_INPUT_TOKEN:", e)
+  }
+}
 
 const pwd = import.meta.env.PASSWORD
 
@@ -54,12 +73,14 @@ export const post: APIRoute = async context => {
       messages,
       key = localKey,
       temperature = 0.6,
-      password
+      password,
+      model = defaultModel
     } = body as {
       messages?: ChatMessage[]
       key?: string
-      temperature?: number
+      temperature: number
       password?: string
+      model: Model
     }
 
     if (pwd && pwd !== password) {

@@ -1,6 +1,7 @@
 ---
 
 import ThemeToggle from "./ThemeToggle.astro"
+export const prerender = true
 ---
 
 <header class="sticky top--60px z-99 px-2em">
@@ -8,7 +9,7 @@ import ThemeToggle from "./ThemeToggle.astro"
     <img src="https://www.aitools.chat/wp-content/themes/onenav/images/favicon.png" />
     
   </div>
-  <div class="flex justify-between items-center">
+  <div class="flex justify-between items-center py-1">
     <div
       class="flex items-center mt-2 pb-2 text-2xl title cursor-pointer"
       onclick="scrollToTop()"

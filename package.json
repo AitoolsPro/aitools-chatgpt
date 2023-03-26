@@ -1,7 +1,7 @@
 {
   "name": "aitools-chatgpt",
   "version": "0.1.0",
-  "description": "Powered by OpenAI Chatgpt API and Vercel",
+  "description": "Elegant and Powerful. Powered by OpenAI and Vercel",
   "type": "module",
   "license": "MIT",
   "scripts": {
@@ -73,3 +73,4 @@
     "node": ">18.0.0"
   }
 }
+

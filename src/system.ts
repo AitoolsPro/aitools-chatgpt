@@ -1,10 +1,13 @@
-export const setting = {
+import type { Model } from "./types"
+
+export const defaultSetting = {
   continuousDialogue: true,
   archiveSession: false,
   openaiAPIKey: "",
   openaiAPITemperature: 60,
   password: "",
-  systemRule: ""
+  systemRule: "",
+  model: "gpt-3.5-turbo" as Model
 }
 
 export const message = `欢迎使用 ChatGPT聊天机器人
@@ -18,6 +21,14 @@ export const message = `欢迎使用 ChatGPT聊天机器人
 - 开启连续对话：OpenAI 并没提供ChatGPT那样的上下文功能，只能每次都把全部对话传过去，并且都要算 token，而且仍然有最大4096 token 的限制。
 - [[Shift]] + [[Enter]] 换行。开头输入 [[/]] 或者 [[空格]] Prompt 预设。[[↑]] 可编辑最近一次提问。点击顶部名称滚动到顶部，点击输入框滚动到底部。`
 
-export type Setting = typeof setting
+export type Setting = typeof defaultSetting
 
-export const resetContinuousDialogue = false
+export const defaultResetContinuousDialogue = false
+
+export const defaultMaxInputTokens: Record<Model, number> = {
+  "gpt-3.5-turbo": 3072,
+  "gpt-4": 6144,
+  "gpt-4-32k": 24576
+}
+
+export const defaultModel: Model = "gpt-3.5-turbo"

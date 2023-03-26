@@ -41,5 +41,4 @@ export function clickOutside(el: Element, accessor: Accessor<any>) {
   onCleanup(() => document.body.removeEventListener("click", onClick))
 }
 
-export { clickOutside } from './clickOutside';
 

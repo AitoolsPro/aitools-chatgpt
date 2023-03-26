@@ -42,4 +42,4 @@ export function clickOutside(el: Element, accessor: Accessor<any>) {
 }
 
 export { clickOutside } from './clickOutside';
-export { useCopyCode } from './useCopyCode';
+

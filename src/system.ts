@@ -10,7 +10,7 @@ export const defaultSetting = {
   model: "gpt-3.5-turbo" as Model
 }
 
-export const message = `欢迎使用 ChatGPT聊天机器人
+export const defaultMessage = `欢迎使用 ChatGPT聊天机器人
 - 艾兔思Aitools | ai终极指南 
 - 抖音/微信公众号/视频号：艾兔思Aitools
 -  [@艾兔思Aitools中文导航论坛](https://aitools.chat) 。

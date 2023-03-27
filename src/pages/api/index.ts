@@ -117,7 +117,7 @@ export const post: APIRoute = async context => {
       return acc + tokens
     }, 0)
 
-    if (tokens > (Number.isInteger(maxTokens) ? maxTokens : 3072)) {
+    if (tokens > maxInputTokens[model]) {
       if (messages.length > 1)
         throw new Error(
           `由于开启了连续对话选项，导致本次对话过长，请清除部分内容后重试，或者关闭连续对话选项。`

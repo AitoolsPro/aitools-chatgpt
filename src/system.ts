@@ -14,6 +14,7 @@ export const defaultMessage = `欢迎使用 ChatGPT聊天机器人
 - 艾兔思Aitools | ai终极指南 
 - 抖音/微信公众号/视频号：艾兔思Aitools
 -  [@艾兔思Aitools中文导航论坛](https://aitools.chat) 。
+-  [@体验艾兔思ChatGPT最新版本](https://myaitools.cn) 。
 - 设置：
 - 首次用需填网站暗号：aitools ，如自有API Key请填写，现由我免费提供，故意滥用删ID。
 - 系统角色指令：会在每次提问时添加，需加句号。主要对ChatGPT的语气，口头禅这些定制。（可不填）

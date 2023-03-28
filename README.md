@@ -9,7 +9,7 @@
 1. [aitools.fans](https://www.aitools.fans)，由 [@艾兔思aitools](https://aitools.chat) 免费提供。
 
 
-API Key 由我自己免费提供，请不要滥用，不提供长期服务，请自行部署。
+API Key 由我自己免费提供，请不要滥用。不提供长期服务，请自行部署。
 
 ## 使用方法
 
